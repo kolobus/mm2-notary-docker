@@ -1,0 +1,20 @@
+## Only example, do not copypaste!
+
+  mm2:
+    image: mm2:latest
+    ports:
+      - 38890:38890
+    env_file:
+      - ./cfg/mm2.env
+    volumes:
+      - mm2-database:/DB
+    deploy:
+      resources:
+        limits:
+          memory: 4GB
+        reservations:
+          memory: 512M
+    networks:
+      services_frontend:
+    restart: unless-stopped
+    container_name: mm2
