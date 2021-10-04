@@ -1,0 +1,8 @@
+{
+    "gui": "NN_SEED",
+    "netid": 7777,
+    "i_am_seed": true,
+    "rpc_password": "DEF_MM2_PASSWORD",
+    "passphrase": "DEF_MM2_SEED",
+    "userhome": "/${HOME#\"/\"}"
+}
