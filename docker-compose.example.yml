@@ -1,19 +1,25 @@
 ## Only example, do not copypaste!
 
-  mm2:
-    image: mm2:latest
+    image: kolobus/mm2:latest
     ports:
       - 38890:38890
+      - 38900:38900
     env_file:
       - ./cfg/mm2.env
     volumes:
-      - mm2-database:/DB
+      - mm2:/DB
+      - ./cfg/mm2-fullchain.pem:/root/fullchain.pem:ro
+      - ./cfg/mm2-privkey.pem:/root/privkey.pem:ro
     deploy:
       resources:
         limits:
-          memory: 4GB
+          memory: 2GB
         reservations:
           memory: 512M
+    logging:
+      driver: local
+      options:
+        max-size: 100m
     networks:
       services_frontend:
     restart: unless-stopped
