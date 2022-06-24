@@ -4,5 +4,9 @@
     "i_am_seed": true,
     "rpc_password": "DEF_MM2_PASSWORD",
     "passphrase": "DEF_MM2_SEED",
-    "userhome": "/${HOME#\"/\"}"
+    "userhome": "/root/",
+    "wss_certs": {
+        "server_priv_key":"/root/privkey.pem",
+        "certificate":"/root/fullchain.pem"
+    }
 }
